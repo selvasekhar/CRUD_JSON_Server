@@ -1,0 +1,28 @@
+<div class="container">
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>update</th>
+        <th>view</th>
+        <th>delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of appdata">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.username}}</td>
+        <td>{{data.email}}</td>
+        <td><button class="btn btn-primary" (click)="updata(data.id)">update</button></td>
+        <td><button class="btn btn-info" (click)="onview(data.id)">view</button></td>
+        <td><button class="btn btn-success" (click)="ondelete(data.id)">delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success" (click)="addnewUser()">Add</button>
+</div>
+

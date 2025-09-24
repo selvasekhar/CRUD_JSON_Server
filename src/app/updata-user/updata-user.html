@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3">
+      <form action="/action_page.php" [formGroup]="updateUserForm" (ngSubmit)="onsubmit()">
+        <div class="form-group m-3 col-3" >
+          <label for="name">Name</label>
+          <input type="name" class="form-control" id="name" formControlName="name" />
+        </div>
+        <div class="form-group m-3">
+          <label for="username">Username:</label>
+          <input type="username" class="form-control" id="username" formControlName="username"/>
+        </div>
+         <div class="form-group m-3">
+          <label for="email">email:</label>
+          <input type="email" class="form-control" id="email" formControlName="email"/>
+        </div>
+        <div>
+        <button type="submit" class="btn btn-default">Updata</button>&nbsp;
+        <button type="submit" class="btn btn-default" (click)="cancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
